@@ -10,26 +10,6 @@ const App = () => {
   const [filter, setFilter] = useState('');
   const [mounted, setMounted] = useState(false);
 
-  // useEffect(() => {
-  //   const savedContacts = JSON.parse(localStorage.getItem('contacts'));
-  //   console.log('storage');
-  //   console.log(savedContacts);
-  //   if (savedContacts) {
-  //     console.log('read');
-  //     setContacts(savedContacts);
-  //     // console.log(localStorage.getItem('contacts'));
-  //     console.log('state:');
-  //     console.log(contacts);
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   // console.log('write');
-  //   // localStorage.setItem('contacts', JSON.stringify(contacts));
-  //   console.log('state:');
-  //   console.log(contacts);
-  // }, [contacts]);
-
   useEffect(() => {
     if (mounted) {
       localStorage.setItem('contacts', JSON.stringify(contacts));

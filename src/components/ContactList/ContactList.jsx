@@ -1,4 +1,3 @@
-// import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { Contact } from './Contact/Contact';
@@ -6,25 +5,21 @@ import { Contact } from './Contact/Contact';
 import css from './ContactList.module.css';
 
 const ContactList = ({ contacts, onDelete }) => {
-  // render() {
-    // const { contacts } = this.props;
-
-    return (
-      <ul>
-        {contacts.map(elem => (
-          <li key={elem.id} className={css.element}>
-            <Contact
-              name={elem.name}
-              number={elem.number}
-              id={elem.id}
-              onDelete={onDelete}
-            />
-          </li>
-        ))}
-      </ul>
-    );
-  // }
-}
+  return (
+    <ul>
+      {contacts.map(elem => (
+        <li key={elem.id} className={css.element}>
+          <Contact
+            name={elem.name}
+            number={elem.number}
+            id={elem.id}
+            onDelete={onDelete}
+          />
+        </li>
+      ))}
+    </ul>
+  );
+};
 
 ContactList.propTypes = {
   contacts: PropTypes.arrayOf(PropTypes.object),

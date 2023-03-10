@@ -7,16 +7,11 @@ const Filter = ({ changeAction }) => {
   const [name, setName] = useState('');
 
   const changeHandler = event => {
-    // this.setState({
-    //   name: event.currentTarget.value,
-    // });
-    // this.props.changeAction(event.currentTarget.value);
     const formValue = event.currentTarget.value;
     setName(formValue);
     changeAction(formValue);
   };
 
-  // render() {
   return (
     <div className={css.container}>
       <strong>Find contacts by name</strong>
@@ -30,7 +25,6 @@ const Filter = ({ changeAction }) => {
       />
     </div>
   );
-  // }
 };
 
 Filter.propTypes = {
