@@ -21,7 +21,7 @@ const App = () => {
 
       setMounted(true);
     }
-  }, [contacts]);
+  }, [contacts, mounted]);
 
   const addContact = contact => {
     const nameList = contacts.map(cont => cont.name);
