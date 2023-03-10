@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { Contact } from './Contact/Contact';
 
 import css from './ContactList.module.css';
 
-class ContactList extends Component {
-  render() {
-    const { contacts } = this.props;
+const ContactList = ({ contacts, onDelete }) => {
+  // render() {
+    // const { contacts } = this.props;
 
     return (
       <ul>
@@ -17,13 +17,13 @@ class ContactList extends Component {
               name={elem.name}
               number={elem.number}
               id={elem.id}
-              onDelete={this.props.onDelete}
+              onDelete={onDelete}
             />
           </li>
         ))}
       </ul>
     );
-  }
+  // }
 }
 
 ContactList.propTypes = {
